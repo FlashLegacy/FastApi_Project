@@ -1,0 +1,1 @@
+Учебный проект по видео уроку [https://www.youtube.com/watch?v=WJloF5Vf3DQ]
