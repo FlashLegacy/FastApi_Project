@@ -1,1 +1,1 @@
-Учебный проект по видео уроку [https://www.youtube.com/watch?v=WJloF5Vf3DQ]
+Учебный проект по видео уроку [https://www.youtube.com/watch?v=hO7b4yh-Qfs&list=PLeLN0qH0-mCVQKZ8-W1LhxDcVlWtTALCS&index=5]

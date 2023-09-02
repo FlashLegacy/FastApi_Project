@@ -1,24 +1,13 @@
-from sqlalchemy import Column, Boolean, Integer, String, JSON, ForeignKey
-from sqlalchemy.orm import relationship
+from sqlalchemy import String, Integer, JSON, TIMESTAMP, ForeignKey, MetaData, Table, Column
 
 from db import Base
 
-class User(Base):
-    __tablename__ = "user"
+class Hotels(Base):
+    __tablename__ = "hotels"
 
-    id                  = Column(Integer, primary_key= True, index= True)
-    email               = Column(String, unique= True, index= True)
-    hashed_password     = Column(String)
-    is_active           = Column(Boolean, default= True)
-
-    items               = relationship("Item", back_populates= "owner")
-
-class Item(Base):
-    __tablename__ = "items"
-
-    id                  = Column(Integer, primary_key= True, index= True)
-    title               = Column(String, index= True)
-    description         = Column(String, index= True)
-    owner_id            = Column(Integer, ForeignKey("users.id"))
-
-    owner               = relationship("User", back_populates= "items")
+    id              = Column(Integer,   primary_key = True)
+    name            = Column(String,    nullable    = False)
+    location        = Column(String,    nullable    = False)
+    services        = Column(JSON)
+    rooms_quantity  = Column(Integer,   nullable    = False)
+    image_id        = Column(Integer)
